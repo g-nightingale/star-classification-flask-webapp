@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Star Type Prediction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+    <!-- Navigation (Stays on Top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="{{ url_for('home') }}" class="w3-bar-item w3-button"><b>SP</b> Star Predictor</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="{{ url_for('about') }}" class="w3-bar-item w3-button">About</a>
+                <a href="{{ url_for('prediction') }}" class="w3-bar-item w3-button">Prediction</a>
+                <a href="{{ url_for('visualisation') }}" class="w3-bar-item w3-button">Visualisation</a>
+                <a href="{{ url_for('links') }}" class="w3-bar-item w3-button">Links</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Content -->
+    <div id="home" class="w3-content" style="width:80%; padding-top:20px;">
+
+        <!-- About -->
+        <div id="about" class="w3-container w3-padding-32 w3-white">
+            <h2 class="w3-center">Star Type Prediction</h2>
+            <p class="w3-left">Predicts a star type given inputs of absolute temperature, relative luminosity, realtive radius, absolute magnitude, color and spectral class: </p>
+        </div>
+
+        <!-- Form with data to perform regression -->
+        <form action="predict" method="GET" class="w3-container w3-white">
+
+            <div class="w3-white w3-padding-16">
+                <label><b>Absolute Temperature (K)</b></label>
+                <input class="w3-input w3-border w3-round" type="number" value='5000' step='1' min='1000' max='40000' name="temp" id="temp">
+            </div>    
+            <div class="w3-white w3-padding-16">
+                <label><b>Relative Luminosity (L/Lo)</b></label>
+                <input class="w3-input w3-border w3-round" type="number" value='1.0' step='0.0001' min='0' max='1000000' name="lumen" id="lumen">
+            </div>                  
+            <div class="w3-white w3-padding-16">
+                <label><b>Relative Radius (R/Ro)</b></label>
+                <input class="w3-input w3-border w3-round" type="number" value='1.0' step='0.0001' min='0' max='2000' name="radius" id="radius">
+            </div>   
+            <div class="w3-white w3-padding-16">
+                <label><b>Absolute Magnitude (Mv)</b></label>
+                <input class="w3-input w3-border w3-round" type="number" value='8' step='0.001' min='-20' max='20' name="a_m" id="a_m">
+            </div>   
+            <div class="w3-white w3-padding-16">
+                <label><b>Star Color</b></label>
+                <select class="w3-input w3-border w3-round" id="color" name="color">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Blue-White">Blue-White</option>
+                    <option value="White">White</option>
+                    <option value="Yellow-White">Yellow-White</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Orange-Red">Orange</option>
+                    <option value="Orange-Red">Orange-Red</option>
+                    <option value="Yellow-Orange">Yellow-Orange</option>
+                </select>
+            </div>   
+            <div class="w3-white w3-padding-16">
+                <label><b>Spectral Class</b></label>
+                <select class="w3-input w3-border w3-round" id="spectral_class" name="spectral_class">
+                    <option value="M">M</option>
+                    <option value="B">B</option>
+                    <option value="O">O</option>
+                    <option value="A">A</option>
+                    <option value="F">F</option>
+                    <option value="K">K</option>
+                    <option value="G">G</option>
+                </select>
+            </div>   
+            <div class="w3-white w3-padding-16">
+                <button class="w3-button w3-green w3-border w3-border-green w3-round-large">Predict Star Type</button>
+            </div>      
+        </form>
+
+        <!-- Footer -->
+        <div class="w3-center w3-padding-32 w3-white">
+            <p class="w3-center w3-padding">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                    title="W3.CSS" target="_blank">w3.css</a></p>
+        </div>
+
+        <!-- End Content -->
+    </div>
+
+</body>
+
+</html>

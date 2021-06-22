@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+    <!-- Navigation (Stays on Top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="{{ url_for('home') }}" class="w3-bar-item w3-button"><b>SP</b> Star Predictor</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="{{ url_for('about') }}" class="w3-bar-item w3-button">About</a>
+                <a href="{{ url_for('prediction') }}" class="w3-bar-item w3-button">Prediction</a>
+                <a href="{{ url_for('visualisation') }}" class="w3-bar-item w3-button">Visualisation</a>
+                <a href="{{ url_for('links') }}" class="w3-bar-item w3-button">Links</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Content -->
+    <div id="home" class="w3-content" style="width:60%; padding-top:20px;">
+
+        <!-- About -->
+        <div id="about" class="w3-container w3-padding-32 w3-white" >
+            <h2 class="w3-center">About</h2>
+            <p class="w3-left">I built this webapp as a means of learning how to use Flask & Python, with integrated ML elements and Plotly visualisation. 
+                <br><br>
+                The main functionality of this webapp is to predict a star type given input data including temperature, luminosity and radius. 
+                The webapp also has functionality to inspect the underlying data via interactive Plotly visualisations.
+                <br><br>
+            </p>
+            <h2 class="w3-center">Hertzsprung-Russell diagram</h2>
+            <p>
+                The Hertzsprung-Russell diagram is a visual representation between the luminosities and effective temperatures of stars and can be used as a guide for classification.
+                This method of visualising star classes was developed in 1910 by Ejnar Hertzsprung and Henry Norris Russell.
+                <br><br>
+                <i>For more information please refer to <a href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">Wikipedia</a></i>
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="w3-center">
+            <img src="static/images/hertzsprung_russell.jpg" alt="Image" style="width:60%;">
+        </div>
+
+        <!-- Footer -->
+        <div class="w3-center w3-padding-32 w3-white">
+            <p class="w3-center w3-padding">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                    title="W3.CSS" target="_blank">w3.css</a></p>
+        </div>
+        <!-- End Content -->
+    </div>
+
+</body>
+
+</html>

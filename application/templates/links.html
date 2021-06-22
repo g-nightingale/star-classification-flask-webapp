@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+    <!-- Navigation (Stays on Top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="{{ url_for('home') }}" class="w3-bar-item w3-button"><b>SP</b> Star Predictor</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="{{ url_for('about') }}" class="w3-bar-item w3-button">About</a>
+                <a href="{{ url_for('prediction') }}" class="w3-bar-item w3-button">Prediction</a>
+                <a href="{{ url_for('visualisation') }}" class="w3-bar-item w3-button">Visualisation</a>
+                <a href="{{ url_for('links') }}" class="w3-bar-item w3-button">Links</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Content -->
+    <div id="home" class="w3-content" style="width:40%; padding-top:20px;">
+
+        <!-- About -->
+        <div id="about" class="w3-container w3-padding-32 w3-white w3-center">
+            <h2 class="w3-center">Links</h2>
+            <p class="w3-center">Useful links that I used to build this webapp: </p>
+            <a class="w3-left" href="https://hackersandslackers.com/your-first-flask-application">Creating your first Flask application</a> <br>
+            <a class="w3-left" href="https://hackersandslackers.com/flask-application-factory">Demystifying Flask's application factory</a> <br>
+            <a class="w3-left" href="https://www.w3schools.com/w3css/w3css_templates.asp">W3.CSS templates</a> <br>
+            <a class="w3-left" href="https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946">Web visualization with Plotly and Flask</a> <br>
+            <a class="w3-left" href=https://towardsdatascience.com/an-interactive-web-dashboard-with-plotly-and-flask-c365cdec5e3f>An interactive web dashboard with Plotly and Flask</a> <br>
+            <a class="w3-left" href="https://www.kaggle.com/deepu1109/star-dataset">Kaggle - Star dataset to predict star types</a> <br>
+            <a class="w3-left" href="https://stackoverflow.com/questions/27539309/how-do-i-create-a-link-to-another-html-page">Using the Flask "url_for" function</a> <br>
+        </div>
+
+        <!-- Footer -->
+        <div class="w3-center w3-padding-32 w3-white">
+            <p class="w3-center w3-padding">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                    title="W3.CSS" target="_blank">w3.css</a></p>
+        </div>
+        <!-- End Content -->
+    </div>
+
+</body>
+
+</html>
